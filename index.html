@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The form</title>
+		<meta charset="UTF-8" />
+		<style>
+			/* Please add the CSS here */
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			form {
+				margin: 3rem auto;
+				border: 2px solid lightgray;
+				border-radius: 0.5rem;
+				padding: 2.5rem;
+				width: 20rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			input {
+				padding: 0.25rem;
+				border-radius: 0.5rem;
+				border: 2px solid lightgray;
+			}
+			button {
+				margin-top: 0.5rem;
+				align-self: flex-end;
+				background-color: transparent;
+				border: 3px solid rgb(83, 153, 203);
+				border-radius: 0.5rem;
+				padding: 2px 0.5rem;
+				color: rgb(83, 153, 203);
+				font-weight: bold;
+				text-align: center;
+			}
+
+			h3 {
+				font-size: 2rem;
+				color: rgb(83, 153, 203);
+				margin-bottom: 1rem;
+			}
+		</style>
+		<script>
+			window.onload = () => {
+				// Please add the JavaScript code here
+				const form = document.querySelector("form");
+				form.addEventListener("submit", (event) => {
+					event.preventDefault();
+					const inputNum = document.getElementById("input1").value;
+					//eleghos
+					if (+inputNum > 10) {
+						document.getElementById("par1").textContent = inputNum;
+						console.log("in check");
+					} else {
+						window.alert("Θα χαρώ πολύ να συνεργαστουμε!");
+					}
+				});
+			};
+		</script>
+	</head>
+
+	<body>
+		<!--Please add the HTML here-->
+		<form>
+			<h3>Form</h3>
+			<p id="par1">Number</p>
+			<input id="input1" type="number" placeholder="Please enter a number" />
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
