@@ -27,6 +27,13 @@
 				border-radius: 0.5rem;
 				border: 2px solid lightgray;
 			}
+
+			.alert {
+				padding: 0.25rem;
+				border-radius: 0.5rem;
+				border: 4px solid red;
+			}
+
 			button {
 				margin-top: 0.5rem;
 				align-self: flex-end;
@@ -57,7 +64,9 @@
 						document.getElementById("par1").textContent = inputNum;
 						console.log("in check");
 					} else {
-						window.alert("Θα χαρώ πολύ να συνεργαστουμε!");
+						window.alert(
+							"Ο αριθμος ειναι πολυ μικρος.\nΘα χαρώ πολύ να συνεργαστουμε!"
+						);
 					}
 				});
 			};
